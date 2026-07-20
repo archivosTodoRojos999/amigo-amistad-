@@ -6,7 +6,7 @@
 <title>Día del Amigo 🎉</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-  
+
   :root {
     --bg-1: #0f0c29;
     --bg-2: #302b63;
@@ -291,9 +291,8 @@ const data = [
     body: "Después de la lluvia viene el arcoíris. Y vos siempre fuiste mi arcoíris. <strong>Cuando todo estaba gris, vos aparecías con color</strong>. Con una idea, con un plan, con una sonrisa que no aceptaba un 'no'. Los días difíciles eran más fáciles con vos al lado. Y los días buenos eran increíbles con vos al lado. En realidad, todo es mejor con vos.",
     sign: "Tu amigo que siempre ve tu color" },
 ];
-  
 
-  // ===== Render gift buttons =====
+// ===== Render gift buttons =====
 const giftsGrid = document.getElementById('giftsGrid');
 data.forEach((item, i) => {
   const btn = document.createElement('button');
@@ -331,7 +330,7 @@ for (let i = 0; i < 30; i++) {
   particlesContainer.appendChild(p);
 }
 
-// ===== MUSIC PLAYER =====
+// ==// ===== MUSIC PLAYER =====
 const audioPlayer = document.getElementById('audioPlayer');
 const musicBtn = document.getElementById('musicBtn');
 const musicIcon = document.getElementById('musicIcon');
@@ -472,50 +471,6 @@ audioPlayer.addEventListener('play', function() {
 });
 
 renderSongs();
-
-// ===== PWA: Service Worker Registration =====
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('sw.js').then(function(reg) {
-      console.log('PWA: Service Worker registrado OK');
-    }).catch(function(e) {
-      console.log('PWA: No se pudo registrar el Service Worker', e);
-    });
-  });
-}
-
-// ===== PWA: Install prompt =====
-let deferredPrompt;
-window.addEventListener('beforeinstallprompt', function(e) {
-  e.preventDefault();
-  deferredPrompt = e;
-  // Show install button after 3 seconds
-  setTimeout(function() {
-    if (deferredPrompt) {
-      showInstallBanner();
-    }
-  }, 3000);
-});
-
-function showInstallBanner() {
-  var banner = document.createElement('div');
-  banner.style.cssText = 'position:fixed;bottom:0;left:0;right:0;z-index:300;background:linear-gradient(90deg,#6c5ce7,#fd79a8);color:white;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;font-family:Poppins,sans-serif;box-shadow:0 -4px 20px rgba(0,0,0,0.3);animation:slideUp 0.4s ease;';
-  banner.innerHTML = '<div style="font-size:0.9rem;font-weight:500;">📱 Instalá la app en tu celular</div><button id="installBtn" style="background:white;color:#6c5ce7;border:none;border-radius:20px;padding:8px 18px;font-weight:700;font-size:0.85rem;cursor:pointer;font-family:inherit;">Instalar</button>';
-  document.body.appendChild(banner);
-
-  document.getElementById('installBtn').addEventListener('click', function() {
-    if (deferredPrompt) {
-      deferredPrompt.prompt();
-      deferredPrompt.userChoice.then(function() {
-        banner.remove();
-        deferredPrompt = null;
-      });
-    }
-  });
-
-  // Auto-hide after 15 seconds
-  setTimeout(function() { if (banner.parentNode) banner.remove(); }, 15000);
-}
 </script>
 
 </body>
