@@ -277,10 +277,6 @@ const data = [
     title: "El Libro de Nuestras Travesuras",
     body: "Si alguien escribiera un libro sobre todo lo que hicimos, sería un bestseller. <strong>Las veces que casi nos descubren, las excusas creativas, las misiones imposibles</strong> que solo dos amigos del secundario podían emprender. Cada capítulo tiene tu nombre. Cada página tiene nuestra risa. Que este libro nunca se cierre.",
     sign: "Tu cómplice favorito" },
-  { icon: "🍫", name: "Chocolate Secreto", sub: "Para los que comparten todo",
-    title: "El Chocolate que Siempre Compartimos",
-    body: "Compartir no es solo partir un chocolate a la mitad. Es <strong>compartir el último bocado, el último asiento, la última esperanza</strong>. Es quedarse cuando otros se van. Es escuchar cuando otros ignoran. Vos siempre compartiste más que un chocolate: compartiste tu tiempo, tu paciencia, tu amistad. Y eso no tiene precio.",
-    sign: "Alguien que siempre quiere compartir con vos" },
   { icon: "🚀", name: "Ticket al Futuro", sub: "Para los que sueñan juntos",
     title: "Un Ticket Para el Futuro",
     body: "El secundario se termina, pero nuestra amistad no. <strong>Este es un ticket para el futuro</strong>, para dentro de cinco, diez o veinte años. Cuando nos encontremos de nuevo, quiero que sigamos riendo de las mismas tonterías, que sigamos recordando los mismos momentos, que sigamos siendo nosotros. Porque los amigos de verdad no se despiden, solo dicen 'hasta pronto'.",
@@ -293,14 +289,6 @@ const data = [
     title: "Los Globos de Nuestra Alegría",
     body: "Saber reír es un don, y vos lo tenés. <strong>Cuando yo no podía reír, vos encontrabas la forma</strong>. Con una cara, con una palabra, con una historia tan absurda que no había más remedio que reír. Los globos se elevan, las risas se quedan. Y las risas que compartimos son las que más alto llegan. Gracias por llenar mis días de color.",
     sign: "Tu amigo que todavía se ríe con tus chistes" },
-  { icon: "🔑", name: "Llave del Amor", sub: "Para los que abren puertas",
-    title: "La Llave que Abre Todo",
-    body: "Hay puertas que solo se abren con la llave correcta. Vos fuiste esa llave para mí. <strong>Me abriste la puerta a nuevos amigos, a nuevas experiencias, a ser una mejor persona</strong>. A veces no te das cuenta del impacto que tenés en los demás. Pero yo sí. Y por eso, hoy, te digo: gracias por abrirme las puertas que yo solo no podía.",
-    sign: "Tu amigo que nunca olvida lo que hiciste" },
-  { icon: "💌", name: "Carta del Corazón", sub: "Para los que dicen la verdad",
-    title: "Una Carta Directa del Corazón",
-    body: "No soy bueno con las palabras. Pero hoy voy a intentar. <strong>Vos me cambiaste la vida</strong>. Punto. Antes de vos, los días eran días. Después de vos, los días eran momentos. Y los momentos con vos eran los mejores. No sé si te lo digo suficiente, pero te digo lo más importante: <strong>gracias por ser mi amigo</strong>. Eso es todo. Eso es suficiente.",
-    sign: "Con el corazón en la mano" },
   { icon: "🏆", name: "Trofeo de Amistad", sub: "Para los mejores",
     title: "El Trofeo Que Te Merecés",
     body: "Si hubiera un trofeo por ser el mejor amigo, <strong>te lo daría sin pensar</strong>. Por aguantarme, por escucharme, por no irte cuando era fácil irse. Por quedarte cuando otros no lo hacían. Vos te ganaste este trofeo con cada gesto, con cada acto pequeño que otros no ven pero yo sí. Este es tu lugar. Este siempre fue tu lugar.",
@@ -310,8 +298,9 @@ const data = [
     body: "Después de la lluvia viene el arcoíris. Y vos siempre fuiste mi arcoíris. <strong>Cuando todo estaba gris, vos aparecías con color</strong>. Con una idea, con un plan, con una sonrisa que no aceptaba un 'no'. Los días difíciles eran más fáciles con vos al lado. Y los días buenos eran increíbles con vos al lado. En realidad, todo es mejor con vos.",
     sign: "Tu amigo que siempre ve tu color" },
 ];
+  
 
-// ===== Render gift buttons =====
+  // ===== Render gift buttons =====
 const giftsGrid = document.getElementById('giftsGrid');
 data.forEach((item, i) => {
   const btn = document.createElement('button');
